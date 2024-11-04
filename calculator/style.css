@@ -11,6 +11,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 97vh;
+    overflow:hidden;
     /* border:2px solid red;  */
     
 }
@@ -49,9 +50,10 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70%;
+    min-width: 510px;
     gap: 10px;
     margin-top: 20px;
+
     /* border:2px solid red;  */
 }
 
