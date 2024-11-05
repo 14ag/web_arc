@@ -9,7 +9,7 @@ let screen1 = document.querySelector('.input');
 let screen2 = document.querySelector('.result');
 
 
-//create elements
+//create elements, attributes, tags
 buttons.forEach(function(x){
     x.addEventListener('click',function(){
         screen1.value += x.value
@@ -20,7 +20,11 @@ function n_umber(x){
 
 }
 
+//classes, object, methods?
 
+
+
+// --------------pseudocode-----------------//
  // create general array arithmetics and put these inside
 
  // when number is pressed, add it to an string or array "operand[1]"
