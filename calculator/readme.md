@@ -5,21 +5,48 @@ Welcome to the Calculator Website Project! This project aims to generate a webpa
 ## Project Overview
 
 In this project, I'm not going to generate a webpage from a JavaScript file.
-**That will be the second iteration**  because I have much to learn.
+==That will be the second iteration==  because I have much to learn.
+
+## Roadmap
+  **index.html**
+ - [ ] htm the L
+ - [ ] U the X
+
+  **style.css**
+ - [ ] design UI
+ - [ ] import custom elements
+
+  **app.js**
+ - [ ] make selectors
+ - [ ] create a logic
+ - [ ] implement logic
+
+  **testing** 
+ - [ ] functionality
+ - [ ] ui on mobile
+
+  **deployment**
+ - [ ] host locally public network
+ - [ ] host in internet
+
+  **incremental updates**
+ - [ ] n number of improvement
+ - [ ] js version update
+  
 
 ## To-Do List
 
 ### Add Pizzazz:
-- Use hand-drawn elements to give the website a unique and personal touch.
-- Make math things float around to create a dynamic and engaging user experience.
-- Play the math lady meme in the background to add a fun and lighthearted element.
-- On error, use the confused Nick Young meme to provide a humorous touch.
+- Use hand-drawn elements to give the website a unique and personal touch
+- Make math things float around to create a dynamic and engaging user experience
+- Play the math lady meme in the background to add a fun and lighthearted element
+- On error, use the confused Nick Young meme to provide a humorous touch
 
 ### Add History:
-- Implement a history feature using the dataset to keep track of previous calculations.
+- Implement a history feature using the dataset to keep track of previous calculations
 
 ### Use JavaScript Classes:
-- Utilize JavaScript classes to organize and structure the code efficiently.
+- Utilize JavaScript classes to organize and structure the code efficiently omg
 
 ## Getting Started
 
@@ -27,12 +54,12 @@ To get started with this project, you will need to have a basic understanding of
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/calculator-website.git
+   git clone https://github.com/14ag/web_arc.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd calculator-website
+   cd calculator
    ```
 
 3. Open the project in your preferred code editor.
@@ -47,4 +74,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Let's make this calculator website shine! ✨
+   > Let's just make this calculator website for once mannnn !!!

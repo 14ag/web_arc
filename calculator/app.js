@@ -20,47 +20,41 @@ function n_umber(x){
 
 }
 
-/*
 
- * create general array arithmetics and put these inside
+ // create general array arithmetics and put these inside
 
- * when number is pressed, add it to an string or array "operand[1]"
+ // when number is pressed, add it to an string or array "operand[1]"
 
- * when non number is pressed, handle_sign() as follows:
-    * if if number of operands is 0
-        * plus, minus, add sign
-        * times, divide ignore input
+ // when non number is pressed, handle_sign() as follows:
+    // if if number of operands is 0
+        // plus, minus, add sign
+        // times, divide ignore input
                 
-    * if number of operands is 1
-        * plus, minus, times, divide add sign
+    // if number of operands is 1
+        // plus, minus, times, divide add sign
         
-    * if number of operands is more than 1:
-        * times, divide adds sign
-        * plus adds plus sign to array then makes operand[++1]
-        * minus adds plus sign to array then makes operand[++1] that is negative
+    // if number of operands is more than 1:
+        // times, divide adds sign
+        // plus adds plus sign to array then makes operand[++1]
+        // minus adds plus sign to array then makes operand[++1] that is negative
          
-    * if equals, compute
-        * if last value in array is times or divide:
-            * spit error
-        * if compute success:
-            * set answer as operand[1]
-        * add the arithmetic to history
-        *  
-    * if del, delete thing in the array
-        * pop from array
-        * delete last char from input screen
-        * 
-    * if ac, clear all
-        * clear screen
-            * clear input screen
-            * reset results
-        * reset operands
+    // if equals, compute
+        // if last value in array is times or divide:
+            // spit error
+        // if compute success:
+            // set answer as operand[1]
+        // add the arithmetic to history
+            // if its the first entry
+                // create a history button
+         
+    // if del, delete thing in the array
+        // pop from array
+        // delete last char from input screen
+         
+    // if ac, clear all
+        // clear screen
+            // clear input screen
+            // reset results
+        // reset operands
     
- * 
- */
 
-
-
-
-
-// make at least 1 thing spin
