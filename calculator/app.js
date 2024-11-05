@@ -3,8 +3,8 @@ console.log("test this thang");
 
 //get elements by id class tag ... do query selector (all)
 let buttons = Array.from(document.querySelectorAll('button'))
-let screen1 = document.querySelector('[name="input"]');
-let screen2 = document.querySelector('[name="result"]');
+let screen1 = document.querySelector('.input');
+let screen2 = document.querySelector('.result');
 
 
 //create elements
@@ -14,10 +14,14 @@ buttons.forEach(function(x){
         })
     })
 
-// make at least 1 thing spin
-
+    
 // class calculator {
-//     constructor(operand,sign) {
+    //     constructor(operand,sign) {
         
-//     }
-// }
+    //     }
+    // }
+
+
+
+
+// make at least 1 thing spin
