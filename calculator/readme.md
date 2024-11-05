@@ -9,16 +9,16 @@ In this project, I'm not going to generate a webpage from a JavaScript file.
 
 ## Roadmap
   **index.html**
- - [ ] htm the L
- - [ ] U the X
+ - [x] htm the L
+ - [x] U the X
 
   **style.css**
- - [ ] design UI
+ - [x] design UI
  - [ ] import custom elements
 
   **app.js**
- - [ ] make selectors
- - [ ] create a logic
+ - [x] make selectors
+ - [x] create a logic
  - [ ] implement logic
 
   **testing** 
@@ -48,6 +48,7 @@ In this project, I'm not going to generate a webpage from a JavaScript file.
 ### Use JavaScript Classes:
 - Utilize JavaScript classes to organize and structure the code efficiently omg
 
+
 ## Getting Started
 
 To get started with this project, you will need to have a basic understanding of HTML, CSS, and JavaScript. Follow the steps below to set up the project:
@@ -64,9 +65,11 @@ To get started with this project, you will need to have a basic understanding of
 
 3. Open the project in your preferred code editor.
 
+
 ## Contributing
 
 Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
+
 
 ## License
 
