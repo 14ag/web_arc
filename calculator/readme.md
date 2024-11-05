@@ -5,7 +5,7 @@ Welcome to the Calculator Website Project! This project aims to generate a webpa
 ## Project Overview
 
 In this project, I'm not going to generate a webpage from a JavaScript file.
-That will be the second iteratin because I have much to learn.
+That will be the second iteration because I have much to learn.
 
 ## Roadmap
   **index.html**
