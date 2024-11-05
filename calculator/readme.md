@@ -1,11 +1,11 @@
 # Calculator Website Project
 
-Welcome to the Calculator Website Project! This project aims to generate a webpage from a JavaScript file. So, let's embark on this journey together!
+Welcome to the Calculator Website Project! This project aims to generate a webpage from a JavaScript file. So let's embark on this journey together!
 
 ## Project Overview
 
 In this project, I'm not going to generate a webpage from a JavaScript file.
-==That will be the second iteration==  because I have much to learn.
+That will be the second iteratin because I have much to learn.
 
 ## Roadmap
   **index.html**
@@ -30,8 +30,8 @@ In this project, I'm not going to generate a webpage from a JavaScript file.
  - [ ] host in internet
 
   **incremental updates**
- - [ ] n number of improvement
- - [ ] js version update
+ - [ ] n number of improvements
+ - [ ] update to javascript generated version
   
 
 ## To-Do List
@@ -77,4 +77,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-   > Let's just make this calculator website for once mannnn !!!
+   > Let's just make this calculator website for once mahnnnn !!!
