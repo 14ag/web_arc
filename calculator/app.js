@@ -20,7 +20,7 @@ function n_umber(x){
 
 }
 
-//classes, object, methods?
+//classes, object, methods, queues, stacks?
 
 
 
