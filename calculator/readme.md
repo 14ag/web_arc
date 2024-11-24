@@ -1,11 +1,19 @@
 # Calculator Website Project
 
-Welcome to the Calculator Website Project! This project aims to generate a webpage from a JavaScript file. So let's embark on this journey together!
+
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-gold?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![HTML5](https://img.shields.io/badge/HTML5-5.3-blue?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/HTML) [![CSS3](https://img.shields.io/badge/CSS3-3.0-blue?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+Welcome to this calculator website project! the goal is to generate a webpage from a JavaScript file. So let's embark on this journey. Together!
+
+[<img
+	src="https://spotify-onmy-readme.vercel.app/api/now-playing.svg"
+	width="540"
+	height="52"
+/>](https://open.spotify.com/user/31go5wvrwm6pevaak4bnefkc2lim)
 
 ## Project Overview
 
 In this project, I'm not going to generate a webpage from a JavaScript file.
-That will be the second iteration because I have much to learn
+<span >That will be the second iteration</span> because I have much to learn
 
 ## Roadmap
   **index.html**
@@ -73,7 +81,7 @@ Contributions are welcome! If you have any ideas, suggestions, or bug reports, p
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://choosealicense.com/licenses/mit/) file for details.
 
 ---
 

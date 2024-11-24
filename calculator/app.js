@@ -1,4 +1,63 @@
 //figure out whatthe website does okay... a calculator
+
+let input=[]
+if (isNaN(input[input.length-1])==true){
+    throw new Error("syntax error");
+}
+for (let i = 0; i < input.length; i++) {
+    if (isNaN(i)==false) {
+        if (operatorYN){
+            operand2+=i
+            
+        } else{ 
+            operand1+=i
+        }
+    } else {
+        if (operatorYN){
+            calculator.evaluate(operand1,operator,operand2 )
+        }
+        operator=i
+        operatorYN=true
+    }
+    
+}
+class calculator {
+    constructor(parameters) {
+        this.operand1=operand1
+        this.operand2=operand2
+        this.operator=operator
+    }
+    evaluate()
+}
+
+class evaluation {
+    constructor(parameters) { 
+        order
+    }
+    add(a,b){
+        return a+b
+    }
+    subtract(a,b){
+        return a-b
+    }
+    divide(a,b){
+        return a/b
+    }
+    multiply(a,b){
+        return a*b
+    }
+}
+
+class output {
+    constructor(parameters) {
+        
+    }
+}
+
+
+
+
+
 console.log("test this thang");
 
 
@@ -16,11 +75,24 @@ buttons.forEach(function(x){
         })
     })
 
-function n_umber(x){
-
+const x={
+    
 }
 
+
+
+
+
+
+
+
+
+
 //classes, object, methods, queues, stacks?
+
+
+
+
 
 
 
