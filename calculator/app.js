@@ -7,44 +7,34 @@ if (isNaN(input[input.length-1])==true){
 }
 
 class Calculator {
-    constructor(operand1,operator,operand2=nul) {
-        this.operand1=operand1
-        this.operand2=operand2
-        this.operator=operator
-        this.running=""
+    constructor(q){
+        this.statement=q
+        this.running=0
+        // {"-","+","*","/"}={"subtract","add","multiply","divide"}
+        order=["/","*","+","-"]
+
     }
     ac(){}
     del(){}
-    equals(){}
+    equals(){
+        for (let i = 0; i < order.length; i++) {
+            ///////////////////////////////////////////////loop over array looking for order[i] then take found[+1] and [-1] then pass them to be evaluated in the Basic class
+            Calculator.operand();
+            
+        }
+    }
+    history(){}
 
 
     }
     
 
 
-class basics extends calculator {
-    constructor(parameters) { 
-        super()
-    }
-    eval(){
-        switch (operator) {
-            case "/":
-                this.divide(operand1,operand2)
-                break;
-            case "*":
-                this.multiply(operand1,operand2)
-                break;
-            case "+":
-                this.add(operand1,operand2)
-                break;
-            case "-":
-                this.subtract(operand1,operand2)
-                break;
-            default:
-                break;
+class Basic extends Calculator {
+    constructor(a,b) { 
+        this.a=a
+        this.b=b
         }
-        }
-    
     add(a,b){
         return a+b
     }
@@ -52,6 +42,10 @@ class basics extends calculator {
         return a-b
     }
     divide(a,b){
+        if (b==0){
+            throw new Error("dividing by zero????");
+            
+        }
         return a/b
     }
     multiply(a,b){
