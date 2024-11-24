@@ -7,33 +7,57 @@ if (isNaN(input[input.length-1])==true){
 for (let i = 0; i < input.length; i++) {
     if (isNaN(i)==false) {
         if (operatorYN){
-            operand2+=i
+            operand2+=input[i]
             
         } else{ 
-            operand1+=i
+            operand1+=input[i]
         }
     } else {
         if (operatorYN){
-            calculator.evaluate(operand1,operator,operand2 )
+            // const ii= new Calculator(operand1,operator,operand2)
+            break
         }
-        operator=i
-        operatorYN=true
+        let operator=input[i]
+        let operatorYN=true
     }
     
 }
-class calculator {
-    constructor(parameters) {
+class Calculator {
+    constructor(operand1,operator,operand2=nul) {
         this.operand1=operand1
         this.operand2=operand2
         this.operator=operator
+        this.running=""
     }
-    evaluate()
+    running = function(){
+        
+    }
+    
 }
 
-class evaluation {
+class basics extends calculator {
     constructor(parameters) { 
-        order
+        super()
     }
+    eval(){
+        switch (operator) {
+            case "/":
+                this.divide(operand1,operand2)
+                break;
+            case "*":
+                this.multiply(operand1,operand2)
+                break;
+            case "+":
+                this.add(operand1,operand2)
+                break;
+            case "-":
+                this.subtract(operand1,operand2)
+                break;
+            default:
+                break;
+        }
+        }
+    
     add(a,b){
         return a+b
     }
