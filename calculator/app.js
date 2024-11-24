@@ -13,11 +13,14 @@ class Calculator {
         this.operator=operator
         this.running=""
     }
-    running = function(){
+    ac(){}
+    del(){}
+    equals(){}
+
 
     }
     
-}
+
 
 class basics extends calculator {
     constructor(parameters) { 
@@ -65,11 +68,6 @@ class output {
 
 
 
-
-console.log("test this thang");
-
-
-
 //get elements by id class tag ... do query selector (all)
 let buttons = Array.from(document.querySelectorAll('button'))
 let screen1 = document.querySelector('.input');
@@ -83,18 +81,6 @@ buttons.forEach(function(x){
         parseinput(x.value)
         })
     })
-
-const x={
-    
-}
-
-
-
-
-
-
-
-
 
 
 //classes, object, methods, queues, stacks?
