@@ -1,74 +1,22 @@
 //figure out whatthe website does okay... a calculator
 
 let input=[]
-if (isNaN(input[input.length-1])==true){
-    throw new Error("syntax error");
+
+function inputHandler(x){
+    number=isNaN(x)
+    switch (number) {
+        case true:
+            +=x
+            break;
+        case false:
+            
+            break;
+    
+        default:
+            break;
+    }
     
 }
-
-class Calculator {
-    constructor(operand1,operator,operand2=nul) {
-        this.operand1=operand1
-        this.operand2=operand2
-        this.operator=operator
-        this.running=""
-    }
-    running = function(){
-
-    }
-    
-}
-
-class basics extends calculator {
-    constructor(parameters) { 
-        super()
-    }
-    eval(){
-        switch (operator) {
-            case "/":
-                this.divide(operand1,operand2)
-                break;
-            case "*":
-                this.multiply(operand1,operand2)
-                break;
-            case "+":
-                this.add(operand1,operand2)
-                break;
-            case "-":
-                this.subtract(operand1,operand2)
-                break;
-            default:
-                break;
-        }
-        }
-    
-    add(a,b){
-        return a+b
-    }
-    subtract(a,b){
-        return a-b
-    }
-    divide(a,b){
-        return a/b
-    }
-    multiply(a,b){
-        return a*b
-    }
-}
-
-class output {
-    constructor(parameters) {
-        
-    }
-}
-
-
-
-
-
-console.log("test this thang");
-
-
 
 //get elements by id class tag ... do query selector (all)
 let buttons = Array.from(document.querySelectorAll('button'))
@@ -80,14 +28,9 @@ let screen2 = document.querySelector('.result');
 buttons.forEach(function(x){
     x.addEventListener('click',function(){
         screen1.value += x.value
-        parseinput(x.value)
+        inputHandler(x.value)
         })
     })
-
-const x={
-    
-}
-
 
 
 
