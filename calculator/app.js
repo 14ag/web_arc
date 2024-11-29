@@ -18,7 +18,7 @@ class Calculator {
     del(){}
     equals(){
         for (let i = 0; i < order.length; i++) {
-            ///////////////////////////////////////////////loop over array looking for order[i] then take found[+1] and [-1] then pass them to be evaluated in the Basic class
+            //loop over array looking for order[i] then take found[+1] and [-1] then pass them to be evaluated in the Basic class
             Calculator.operand();
             
         }
