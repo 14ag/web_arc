@@ -27,7 +27,7 @@ In this project, I'm not going to generate a webpage from a JavaScript file.
   **app.js**
  - [x] make selectors
  - [x] create a logic
- - [ ] implement logic
+ - [x] implement logic
 
   **testing** 
  - [ ] functionality

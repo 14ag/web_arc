@@ -77,7 +77,7 @@ function input_handler(x, y, z) {
 
 
 class Calculator {
-    constructor(q) {
+       constructor() {
         this.statement = q
         this.running = 0
         order = ["/", "*", "+", "-"]
