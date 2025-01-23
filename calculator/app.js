@@ -55,7 +55,6 @@ function input_handler(x, y, z) {
     if (y == "n") {
         op[i] += x;
     } else {
-        console.log(z)
         switch (z) {
             case "operator":
                 op.push(x)
@@ -71,14 +70,13 @@ function input_handler(x, y, z) {
                 console.log("errorrrr")
                 break;
         }
-
     }
 }
 
 
 class Calculator {
        constructor() {
-        this.statement = q
+        this.statement = q //what is q?????????
         this.running = 0
         order = ["/", "*", "+", "-"]
         sign = {
@@ -135,7 +133,7 @@ class Calculator {
     
 
 
-class Basic extends Calculator {
+class operator extends Calculator {
     add(a,b){
         return a+b
     }
