@@ -96,7 +96,36 @@ class Calculator {
         op.splice(-1)
     }
 
-    equals() {}
+    equals() {
+        //let op = this.statement
+        let entry = op.toSpliced(op.length, 0, "=").toString(); //to be used in history
+
+    //check if last char is NaN
+        if (isNaN(op[op.length - 1]) == true) {
+            throw new Error("syntax error");
+        }
+
+        // if (op[0] in order) op.shift(running)
+
+        for (let i = 0; i < order.length; i++) {
+            //get no. occurences
+            let counter = op.filter((x) => x == order[i]).length
+
+            //loop over array looking for order[i] 
+            for (let ii = 0; ii < counter; ii++) {
+                let sub_op = op.indexOf(order[i])
+                // then take found[+1] and [-1] then pass them to be evaluated in the Basic class
+                let a = Calculator.sign[order[i]]
+                let b = Calculator[a](op[sub_op - 1], op[sub_op + 1])
+                op.splice(sub_op - 1, 3)
+                op.splice(sub_op - 1, 0, b)
+
+            }
+        }
+
+        this.running = op.toString()
+        return op.toString()
+    }
 
     history() {
         //add entry
