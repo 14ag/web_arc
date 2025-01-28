@@ -5,21 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <title>the calculatorrrr</title>
-    </head>
-    <script src="app00.js"></script>
-    
-    <body>
-        <div id="calculator">
-            <div class="section" id="display">
-                <input class="screen input" value=""  type="text" rows="1">
-                <input class="screen result" value="0" type="text" rows="1">
-            </div>
-            <div class="section" id="keys">
-                <span class="c1">
-                    <span class="r">
-                        <button class="operator" value="-" name="subtract">-</button>
-                        <button class="operator" value="+" name="add">+</button>
-                        <button class="operator" value="*" name="multiply">x</button>
+</head>
+
+<body>
+    <div id="calculator">
+        <div class="section" id="display">
+            <input class="screen input" value=""  type="text" rows="1" readonly>
+            <input class="screen result" value="0" type="text" rows="1" readonly>
+        </div>
+        <div class="section" id="keys">
+            <span class="c1">
+                <span class="r">
+                    <button class="operator" value="-" name="subtract">-</button>
+                    <button class="operator" value="+" name="add">+</button>
+                    <button class="operator" value="*" name="multiply">x</button>
                 </span>
                 <span class="r">
                     <button value="7" name="n">7</button>
@@ -54,9 +53,9 @@
             <button class="run" id="equals" name="equals">=</button>
         </div>
     </div>
-
-    <!-- <script src="app_copy.js"></script> -->
-
+    
+    
+<script src="app.js"></script>
 </body>
 
 </html>
