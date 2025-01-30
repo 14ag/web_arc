@@ -32,10 +32,6 @@ let order = Object.keys(sign).sort(function (a, b) {
     }
 })
 
-
-
-
-
 //create elements, attributes, tags
 buttons.forEach(function (x) {
     x.addEventListener('click',
@@ -115,6 +111,7 @@ function del() {
 
 
 function history() {
+    // add the entry to unordered list
     console.log(entry)
 }
 

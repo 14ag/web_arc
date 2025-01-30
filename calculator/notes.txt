@@ -1,6 +1,1 @@
-fix op 50,56...
-fix q 79
-fix delete logic. it might delete 4 digit numbers
-"9*+-/+3"   prevent people from doing this shit
-filter out commas
-make history work
+impltment history
