@@ -1,1 +1,9 @@
 impltment history
+    on press, the output screen will slide down till it covers 123 row
+    = will have the text ok
+    history screen will be scrollable
+    last result appears at bottom
+    on pressing ok ui reset
+
+implement cache
+iplement the silly cookies question 

@@ -10,6 +10,7 @@
 <body>
     <div id="calculator">
         <div class="section" id="display">
+            <input class="history" value=""  type="text" rows="1" readonly>
             <input class="screen input" value=""  type="text" rows="1" readonly>
             <input class="screen result" value="0" type="text" rows="1" readonly>
         </div>
@@ -17,8 +18,8 @@
             <span class="c1">
                 <span class="r">
                     <button class="operator" value="-" name="subtract">-</button>
-                    <button class="operator" value="+" name="add">+</button>
                     <button class="operator" value="*" name="multiply">x</button>
+                    <button class="operation" id="history" name="history">H</button>
                 </span>
                 <span class="r">
                     <button value="7" name="n">7</button>
