@@ -2,7 +2,7 @@
 let buttons = Array.from(document.querySelectorAll('button'))
 let input_screen = document.querySelector('.input');
 let result_screen = document.querySelector('.result');
-let entry = ""
+let entry = document.querySelector('.history').innerHTML
 let stack = [""]
 let stack_pointer = 0 //stack pointer
 let sign = { //property/key :value
@@ -93,6 +93,7 @@ function equals() {
 
     stack_pointer = 1
     result_screen.value = +stack.toString()
+
 
 }
 

@@ -10,7 +10,6 @@
 <body>
     <div id="calculator">
         <div class="section" id="display">
-            <input class="history" value=""  type="text" rows="1" readonly>
             <input class="screen input" value=""  type="text" rows="1" readonly>
             <input class="screen result" value="0" type="text" rows="1" readonly>
         </div>
@@ -54,6 +53,16 @@
             <button class="operation" id="equals" name="equals">=</button>
         </div>
     </div>
+
+    <div class="history">
+        <ul>
+            <li id="0">
+                <span class="q">...</span><br>
+                <span class="a">...</span><br>
+            </li>
+        </ul>
+      </div>
+
     
     
 <script src="app.js"></script>
