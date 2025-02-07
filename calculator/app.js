@@ -40,7 +40,9 @@ buttons.forEach(function (x) {
         function () {
             // input_screen.value = x.value
             input_handler(x.value, x.name, x.className)
-            input_screen.value = stack.join("")
+            if (x.name!="equals") {
+                input_screen.value = stack.join("")
+                }
 
         })
 })
@@ -94,7 +96,7 @@ function equals() {
     }
 
     stack_pointer = 1
-    result_screen.value = +stack.toString()
+    result_screen.value = stack.join("")
     history_content.innerHTML += `<p><span class="q">${stack0}</span><br><span class="a"><b>${stack}</b></span></p>`
 }
 
