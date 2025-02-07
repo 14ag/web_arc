@@ -7,3 +7,8 @@ impltment history
 
 implement cache
 iplement the silly cookies question 
+
+result shows on input screen too when = is pressed
+2+2=,2+2= gives NaN
+history aint scrollable
+0 can't be preceded con cualqier numemero
