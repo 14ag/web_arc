@@ -95,7 +95,7 @@ function equals() {
         }
     }
 
-    stack_pointer = 1
+    stack_pointer = 0
     result_screen.value = stack.join("")
     history_content.innerHTML += `<p><span class="q">${stack0}</span><br><span class="a"><b>${stack}</b></span></p>`
 }
