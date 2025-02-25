@@ -24,6 +24,22 @@ let sign = { //property/key :value
         return a / b
     },
 }
+
+const baseURL = "https://api.aimlapi.com/v1";
+
+// Insert your AIML API Key in the quotation marks instead of my_key:
+const apiKey = "my_key"; 
+
+const systemPrompt = "You are a travel agent. Be descriptive and helpful";
+const userPrompt = "Tell me about San Francisco";
+
+const api = new OpenAI({
+  apiKey,
+  baseURL,
+});
+
+
+
 // order of opps stated here
 let order = Object.keys(sign).sort(function (a, b) {
     let O = ["/", "*", "+", "-"] //here 
@@ -83,6 +99,30 @@ function equals() {
     }
     function getAnswer(question) {
         //AI api stuff goes here
+        const main = async () => {
+            const completion = await api.chat.completions.create({
+              model: "mistralai/Mistral-7B-Instruct-v0.2",
+              messages: [
+                {
+                  role: "system",
+                  content: systemPrompt,
+                },
+                {
+                  role: "user",
+                  content: userPrompt,
+                },
+              ],
+              temperature: 0.7,
+              max_tokens: 256,
+            });
+          
+            const response = completion.choices[0].message.content;
+          
+            console.log("User:", userPrompt);
+            console.log("AI:", response);
+          };
+          
+          main();
     }
     setTimeout(getAnswer(stack.join("")),500)
  
