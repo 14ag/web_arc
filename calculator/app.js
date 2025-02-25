@@ -3,7 +3,7 @@ let buttons = Array.from(document.querySelectorAll('button'))
 let input_screen = document.querySelector('.input');
 let result_screen = document.querySelector('.result');
 let history_content = document.querySelector('.history_content')
-let card= document.querySelector('.history')
+let card = document.querySelector('.history')
 let stack0
 let stack = [""]
 let stack_pointer = 0 //stack pointer
@@ -28,14 +28,13 @@ let sign = { //property/key :value
 const baseURL = "https://api.aimlapi.com/v1";
 
 // Insert your AIML API Key in the quotation marks instead of my_key:
-const apiKey = "my_key"; 
+const apiKey = "f02949927fc743b18e5c5cbf78597e91";
 
-const systemPrompt = "You are a travel agent. Be descriptive and helpful";
-const userPrompt = "Tell me about San Francisco";
+const systemPrompt = "you are just a calculator. Be brief. give numeric answer only, maximum number of decimal paces should be 3";
 
 const api = new OpenAI({
-  apiKey,
-  baseURL,
+    apiKey,
+    baseURL,
 });
 
 
@@ -56,9 +55,9 @@ buttons.forEach(function (x) {
         function () {
             // input_screen.value = x.value
             input_handler(x.value, x.name, x.className)
-            if (x.name!="equals") {
+            if (x.name != "equals") {
                 input_screen.value = stack.join("")
-                }
+            }
 
         })
 })
@@ -89,70 +88,73 @@ function input_handler(x = "", y = "", z = "") { //x- value,  y-name,  z-class
     }
 }
 
+
+
 function equals() {
-    
+
     stack0 = stack.join(""); //to be used in history
 
     //check if last char is NaN
     if (order.includes(stack[stack_pointer])) {
         return;
     }
-    function getAnswer(question) {
-        //AI api stuff goes here
-        const main = async () => {
-            const completion = await api.chat.completions.create({
-              model: "mistralai/Mistral-7B-Instruct-v0.2",
-              messages: [
-                {
-                  role: "system",
-                  content: systemPrompt,
-                },
-                {
-                  role: "user",
-                  content: userPrompt,
-                },
-              ],
-              temperature: 0.7,
-              max_tokens: 256,
-            });
-          
-            const response = completion.choices[0].message.content;
-          
-            console.log("User:", userPrompt);
-            console.log("AI:", response);
-          };
-          
-          main();
-    }
-    setTimeout(getAnswer(stack.join("")),500)
- 
+    // In app.js (or similar client-side file)
 
+    async function calculateExpression(expression) {
+        try {
+            const response = await fetch('http://localhost:3000/calculate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ expression }),
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log(data.result); // The calculated result from the server
+            //Update UI with data.result
+        } catch (error) {
+            console.error('Error:', error);
+            //Handle error here
+        }
+    }
+
+    // Example usage:
+    let testExpression = "2+2";
+    calculateExpression(testExpression)
+    stack = [getAnswer(stack.join(""))];
     stack_pointer = 0
     result_screen.value = stack.join("")
     history_content.innerHTML += `<p><span class="q">${stack0}</span><br><span class="a"><b>${stack}</b></span></p>`
-}
+};
+
+
 
 function del() {
     if (stack.length != 0) {
-        if (stack[stack.length-1].toString().length<=1) {
+        if (stack[stack.length - 1].toString().length <= 1) {
             stack.pop()
         } else {
-            stack[stack.length-1] = stack[stack.length-1].substring(0, stack[stack.length-1].length - 1)
-            }
+            stack[stack.length - 1] = stack[stack.length - 1].substring(0, stack[stack.length - 1].length - 1)
         }
-        stack_pointer = stack.length>0? stack.length - 1 : stack_pointer
-        
     }
+    stack_pointer = stack.length > 0 ? stack.length - 1 : stack_pointer
+
+}
 
 
 
 function history() {
     // add the entry to unordered list
-    card.style.display="block"
+    card.style.display = "block"
 }
 
 function close() {
-    card.style.display="none"    
+    card.style.display = "none"
 }
 
 
