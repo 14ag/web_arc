@@ -3,7 +3,7 @@ let buttons = Array.from(document.querySelectorAll('button'))
 let input_screen = document.querySelector('.input');
 let result_screen = document.querySelector('.result');
 let history_content = document.querySelector('.history_content')
-let card= document.querySelector('.history')
+let card = document.querySelector('.history')
 let stack0
 let stack = [""]
 let stack_pointer = 0 //stack pointer
@@ -40,9 +40,9 @@ buttons.forEach(function (x) {
         function () {
             // input_screen.value = x.value
             input_handler(x.value, x.name, x.className)
-            if (x.name!="equals") {
+            if (x.name != "equals") {
                 input_screen.value = stack.join("")
-                }
+            }
 
         })
 })
@@ -74,7 +74,7 @@ function input_handler(x = "", y = "", z = "") { //x- value,  y-name,  z-class
 }
 
 function equals() {
-    
+
     stack0 = stack.join(""); //to be used in history
 
     //check if last char is NaN
@@ -102,25 +102,25 @@ function equals() {
 
 function del() {
     if (stack.length != 0) {
-        if (stack[stack.length-1].toString().length<=1) {
+        if (stack[stack.length - 1].toString().length <= 1) {
             stack.pop()
         } else {
-            stack[stack.length-1] = stack[stack.length-1].substring(0, stack[stack.length-1].length - 1)
-            }
+            stack[stack.length - 1] = stack[stack.length - 1].substring(0, stack[stack.length - 1].length - 1)
         }
-        stack_pointer = stack.length>0? stack.length - 1 : stack_pointer
-        
     }
+    stack_pointer = stack.length > 0 ? stack.length - 1 : stack_pointer
+
+}
 
 
 
 function history() {
     // add the entry to unordered list
-    card.style.display="block"
+    card.style.display = "block"
 }
 
 function close() {
-    card.style.display="none"    
+    card.style.display = "none"
 }
 
 
