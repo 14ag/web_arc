@@ -8,7 +8,7 @@ const express = require('express');
         app.use(cors()); // use cors
 
         // Replace with your actual OpenAI API key (and never commit this to version control directly!)
-        const apiKey = 'YOUR_OPENAI_API_KEY';
+        const apiKey = 'f02949927fc743b18e5c5cbf7859XXXX';
 
         const openai = new OpenAI({
             apiKey: apiKey,

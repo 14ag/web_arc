@@ -25,18 +25,6 @@ let sign = { //property/key :value
     },
 }
 
-const baseURL = "https://api.aimlapi.com/v1";
-
-// Insert your AIML API Key in the quotation marks instead of my_key:
-const apiKey = "f02949927fc743b18e5c5cbf78597e91";
-
-const systemPrompt = "you are just a calculator. Be brief. give numeric answer only, maximum number of decimal paces should be 3";
-
-const api = new OpenAI({
-    apiKey,
-    baseURL,
-});
-
 
 
 // order of opps stated here
@@ -164,3 +152,6 @@ function ac() {
     result_screen.value = 0
 
 }
+
+
+
