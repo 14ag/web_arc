@@ -46,7 +46,6 @@ buttons.forEach(function (x) {
             if (x.name != "equals") {
                 input_screen.value = stack.join("")
             }
-
         })
 })
 
@@ -131,7 +130,6 @@ function del() {
         }
     }
     stack_pointer = stack.length > 0 ? stack.length - 1 : stack_pointer
-
 }
 
 
@@ -150,7 +148,6 @@ function ac() {
     stack = [""]
     stack_pointer = 0
     result_screen.value = 0
-
 }
 
 
