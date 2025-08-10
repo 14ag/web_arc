@@ -61,7 +61,16 @@ class Calculator {
                     }
                     break;
                 case "operation":
-                    eval(y + "()") // calls the function stored in y
+                    const operations = {
+                        equals: Calculator.equals,
+                        del: Calculator.del,
+                        history: Calculator.history,
+                        close: Calculator.close,
+                        ac: Calculator.ac
+                    };
+                    if (operations[y]) {
+                        operations[y]();
+                    }
                     break;
             }
         }
@@ -97,11 +106,11 @@ class Calculator {
 
     static history() {
         // add the entry to unordered list
-        card.style.display = "block"
+        Calculator.card.style.display = "block"
     }
 
-    static close() {
-        card.style.display = "none"
+    static close() {   //? ??????????????????? what does this do?
+        Calculator.card.style.display = "none"
     }
 
     static ac() {
@@ -111,7 +120,20 @@ class Calculator {
         Calculator.input_screen.value = "";
     }
 
-    
+    static del() {
+        if (Calculator.stack.length != 0) {
+            let lastElement = Calculator.stack[Calculator.stack.length - 1].toString();
+            if (lastElement.length <= 1) { //If the last item in the stack was a number like "123", it would remove just the last character
+                Calculator.stack.pop()
+            } else {
+                Calculator.stack[Calculator.stack.length - 1] = lastElement.substring(0, lastElement.length - 1);
+            }
+        }
+        Calculator.stack_pointer = Calculator.stack.length > 0 ? Calculator.stack.length - 1 : Calculator.stack_pointer;
+    }
+
+
+
     static init() {
         // Add event listeners to all buttons
         Calculator.buttons.forEach(function (button) {
