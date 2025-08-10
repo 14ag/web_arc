@@ -100,7 +100,7 @@ class Calculator {
     }
 
     static history() {
-        // add the entry to unordered list
+        // add code to add the entry to unordered list
         Calculator.card.style.display = "block"
     }
 
