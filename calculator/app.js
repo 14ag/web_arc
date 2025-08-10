@@ -27,7 +27,6 @@ class Calculator {
         },
     }
 
-
     // order of opps stated here
     static order = Object.keys(Calculator.sign).sort(function (a, b) {
         let O = ["/", "*", "+", "-"] //here 
@@ -37,9 +36,6 @@ class Calculator {
             return 1
         }
     })
-
-
-
 
     static input_handler(x = "", y = "", z = "") { //x- value,  y-name,  z-class
         x = x.toString();
@@ -103,7 +99,6 @@ class Calculator {
         Calculator.history_content.innerHTML += `<p><span class="q">${Calculator.stack0}</span><br><span class="a"><b>${Calculator.stack}</b></span></p>`
     }
 
-
     static history() {
         // add the entry to unordered list
         Calculator.card.style.display = "block"
@@ -131,8 +126,6 @@ class Calculator {
         }
         Calculator.stack_pointer = Calculator.stack.length > 0 ? Calculator.stack.length - 1 : Calculator.stack_pointer;
     }
-
-
 
     static init() {
         // Add event listeners to all buttons
