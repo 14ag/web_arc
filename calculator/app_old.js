@@ -26,13 +26,9 @@ let sign = { //property/key :value
 }
 // order of opps stated here
 let order = Object.keys(sign).sort(function (a, b) {
-    let O = ["/", "*", "+", "-"] //here 
-    if (O.indexOf(a) < O.indexOf(b)) {
-        return -1
-    } else {
-        return 1
-    }
-})
+    let O = ["/", "*", "+", "-"]; //here
+    return O.indexOf(a) - O.indexOf(b);
+});
 
 //create elements, attributes, tags
 buttons.forEach(function (x) {
@@ -67,7 +63,16 @@ function input_handler(x = "", y = "", z = "") { //x- value,  y-name,  z-class
                 }
                 break;
             case "operation":
-                eval(y + "()") // calls the function stored in y
+                const operations = {
+                    equals: equals,
+                    del: del,
+                    history: history,
+                    close: close,
+                    ac: ac
+                };
+                if (operations[y]) {
+                    operations[y](); // safely call the function
+                }
                 break;
         }
     }
