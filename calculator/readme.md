@@ -1,4 +1,4 @@
-# Calculator Website Project
+# Calculator Website Project (with classes)
 
 
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-gold?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![HTML5](https://img.shields.io/badge/HTML5-5.3-blue?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/HTML) [![CSS3](https://img.shields.io/badge/CSS3-3.0-blue?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -39,7 +39,7 @@ In this project, I'm not going to generate a webpage from a JavaScript file.
 
   **mainatinance**
  - [ ] n number of improvements
- - [ ] update to javascript generated version
+ - [ ] update to svelte version
   
 
 ## To-Do List
