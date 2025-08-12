@@ -6,9 +6,12 @@ class Calculator {
     static result_screen = document.querySelector('.result');
     static history_content = document.querySelector('.history_content');
     static card = document.querySelector('.history');
-    static stack0;
+    static stack_pointer = 0; //stack pointer (underscore)
     static stack = [""];
-    static stack_pointer = 0; //stack pointer
+    static answer_show;
+    static history_entry;
+    static lastState;
+
     static sign = { //property/key :value
         "*": (a, b) => {
             return a * b;
@@ -30,6 +33,7 @@ class Calculator {
     // order of opps stated here
     static order = Object.keys(Calculator.sign).sort(function (a, b) {
         let O = ["/", "*", "+", "-"] //here 
+
         if (O.indexOf(a) < O.indexOf(b)) {
             return -1
         } else {
@@ -39,7 +43,14 @@ class Calculator {
 
     static input_handler(x = "", y = "", z = "") { //x- value,  y-name,  z-class
         x = x.toString();
+
         if (y == "n") { // handles numbers
+            if (Calculator.answer_show) {
+                Calculator.answer_show = false;
+                Calculator.stack = [""];
+                Calculator.stack_pointer = 0;
+                Calculator.input_screen.value = "";
+            }
             if (Calculator.order.includes(Calculator.stack[Calculator.stack_pointer])) {
                 Calculator.stack_pointer++
             }
@@ -73,30 +84,40 @@ class Calculator {
     }
 
     static equals() {
+        let cstack = Calculator.stack;
+        let corder = Calculator.order;
 
-        Calculator.stack0 = Calculator.stack.join(""); //to be used in history
+        // By using the spread syntax `[...cstack]`, we create a new, independent copy of the array.
+        Calculator.lastState = {
+            pointer: Calculator.stack_pointer,
+            stack: [...cstack],
+            input_screen: Calculator.input_screen.value,
+        };
+
+        Calculator.history_entry = cstack.join(""); //to be used in history
 
         //check if last char is NaN
-        if (Calculator.order.includes(Calculator.stack[Calculator.stack_pointer])) {
-            return;
+        if (corder.includes(cstack[Calculator.stack_pointer])) {
+            return;  //fix
         }
 
-        for (let i = 0; i < Calculator.order.length; i++) {
+        for (let i = 0; i < corder.length; i++) {
             //get no. occurences
-            let counter = Calculator.stack.filter((x) => x == Calculator.order[i]).length
+            let counter = cstack.filter((x) => x == corder[i]).length
 
             //loop over array looking for order[i] 
             for (let ii = 0; ii < counter; ii++) {
-                let sub_op = Calculator.stack.indexOf(Calculator.order[i]) //a number eg 1
+                let sub_op = cstack.indexOf(corder[i]) //a number eg 1
                 // then take found[+1] and [-1] then pass them to be evaluated in the sign object
                 //stack[sub_op] is currentOperatorSymbol= 
-                Calculator.stack.splice(sub_op - 1, 3, Calculator.sign[Calculator.stack[sub_op]](+Calculator.stack[sub_op - 1], +Calculator.stack[sub_op + 1]))
+                cstack.splice(sub_op - 1, 3, Calculator.sign[cstack[sub_op]](+cstack[sub_op - 1], +cstack[sub_op + 1]))
             }
         }
 
         Calculator.stack_pointer = 0
-        Calculator.result_screen.value = Calculator.stack.join("")
-        Calculator.history_content.innerHTML += `<p><span class="q">${Calculator.stack0}</span><br><span class="a"><b>${Calculator.stack}</b></span></p>`
+        Calculator.result_screen.value = cstack.join("")
+        Calculator.answer_show = true;
+        Calculator.history_content.innerHTML += `<p><span class="q">${Calculator.history_entry}</span><br><span class="a"><b>${cstack}</b></span></p>`
     }
 
     static history() {
@@ -116,8 +137,19 @@ class Calculator {
     }
 
     static del() {
+        let lastState = Calculator.lastState;
+        
         if (Calculator.stack.length != 0) {
+            
+            if (Calculator.answer_show) {
+                Calculator.stack = lastState.stack;
+                Calculator.stack_pointer = lastState.pointer;
+                Calculator.input_screen.value = lastState.input_screen;
+                Calculator.answer_show = false;
+            }
+            
             let lastElement = Calculator.stack[Calculator.stack.length - 1].toString();
+
             if (lastElement.length <= 1) { //If the last item in the stack was a number like "123", it would remove just the last character
                 Calculator.stack.pop()
             } else {
@@ -132,6 +164,7 @@ class Calculator {
         Calculator.buttons.forEach(function (button) {
             button.addEventListener('click', function () {
                 Calculator.input_handler(button.value, button.name, button.className);
+
                 if (button.name !== "equals") {
                     Calculator.input_screen.value = Calculator.stack.join("");
                 }
