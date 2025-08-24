@@ -1,3 +1,4 @@
+roadmap
 impltment history
     on press, the output screen will slide down till it covers 123 row
     = will have the text ok
@@ -8,11 +9,13 @@ impltment history
 implement cache
 iplement the silly cookies question 
 
+
+bugs
 2+2=,2+2= gives NaN
 history aint scrollable
-0 can't be preceded con cualqier numemero
+0 can't be preceded con cualqier numemero *with any number*
 
 
-
-
+fixed
 result shows on input screen too when = is pressed=================
+del deletes the last character of answer
