@@ -101,14 +101,14 @@ class Calculator {
             return;  //fix
         }
 
-        for (let i = 0; i < corder.length; i++) {
-            //get no. occurences
-            let counter = cstack.filter((x) => x == corder[i]).length
+        // for (let i = 0; i < corder.length; i++) {
+        //     //get no. occurences
+        //     let counter = cstack.filter((x) => x == corder[i]).length
 
-            //loop over array looking for order[i] 
-            for (let ii = 0; ii < counter; ii++) {
-                let sub_op = cstack.indexOf(corder[i]) //a number eg 1
-                // then take found[+1] and [-1] then pass them to be evaluated in the sign object
+        //     //loop over array looking for order[i] 
+        //     for (let ii = 0; ii < counter; ii++) {
+        //         let sub_op = cstack.indexOf(corder[i]) //a number eg 1
+        //         // then take found[+1] and [-1] then pass them to be evaluated in the sign object
                 //stack[sub_op] is currentOperatorSymbol= 
                 cstack.splice(sub_op - 1, 3, Calculator.sign[cstack[sub_op]](+cstack[sub_op - 1], +cstack[sub_op + 1]))
             }
